@@ -47,7 +47,7 @@ def get_activation_map(image_path,my_model,labels):
           cam += weight * conv_outputs[:, :, index]
         predictions1 = f'Class predicted: {class_predicted_name}'
         cam /= np.max(cam)
-        cam = cv2.resize(cam, (img_size, img_size))
+        cam = cv2.resize(cam, (512, 512))
         heatmap = cv2.applyColorMap(np.uint8(255 * cam), cv2.COLORMAP_JET)
         heatmap[np.where(cam < 0.2)] = 0
         heatmap = np.uint8(heatmap * 0.3 + image_loaded)
@@ -55,7 +55,7 @@ def get_activation_map(image_path,my_model,labels):
         font = cv2.FONT_HERSHEY_SIMPLEX
         org = (50, 50) 
         fontScale = 0.3
-        color = (255, 0, 0)
+        color = (255, 255,255)
         thickness = 1
           
         # Using cv2.putText() method
