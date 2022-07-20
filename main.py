@@ -16,12 +16,8 @@ import keras
 img_size=224
 labels = {0: 'Normal', 1: 'Pathological'}
 
-@st.experimental_memo(ttl=60)
-def load_model():
-    print(" MODEL LOADED !!!")
-    return load_model('Bioiatriki_project_binary.h5')
 
-model = load_model()
+model = load_model('Bioiatriki_project_binary.h5')
  
 def get_activation_map(image_path,my_model,labels):
         img_size =224        
