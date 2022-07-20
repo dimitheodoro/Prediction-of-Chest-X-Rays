@@ -65,6 +65,9 @@ def get_activation_map(image_path,my_model,labels):
 
         return image_loaded,heatmap,predictions1,class_predicted_name,class_predicted
 
+
+       
+
 print(".......PLEASE WAIT.....")
 
 st.title("Prediction of Chest X-RAYs")
@@ -84,7 +87,9 @@ if uploaded_file is not None:
 
   with col2:
     st.image(heatmap)
+
     st.write(predictions)
+
 
 
 
