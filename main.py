@@ -79,7 +79,7 @@ with st.beta_container():
 uploaded_file = st.file_uploader("Choose an XRAY image (not DICOM) ",type=['png', 'jpg','jpeg'])
   
 if uploaded_file is not None:
-  image_loaded,heatmap,predictions,class_predicted_name,class_predicted,,predictions = get_activation_map(uploaded_file,model,labels)
+  image_loaded,heatmap,predictions,class_predicted_name,class_predicted,predictions = get_activation_map(uploaded_file,model,labels)
 
   col1,col2 = st.beta_columns(2)
   with col1:
