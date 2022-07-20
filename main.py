@@ -63,7 +63,7 @@ def get_activation_map(image_path,my_model,labels):
                           fontScale, color, thickness, cv2.LINE_AA)
         
 
-        return image_loaded,heatmap,predictions1,class_predicted_name,class_predicted_name
+        return image_loaded,heatmap,predictions1,class_predicted_name,class_predicted
 
 print(".......PLEASE WAIT.....")
 
@@ -76,7 +76,7 @@ with st.beta_container():
 uploaded_file = st.file_uploader("Choose an XRAY image (not DICOM) ",type=['png', 'jpg','jpeg'])
   
 if uploaded_file is not None:
-  image_loaded,heatmap,predictions,class_predicted_name,class_predicted_name = get_activation_map(uploaded_file,model,labels)
+  image_loaded,heatmap,predictions,class_predicted_name,class_predicted = get_activation_map(uploaded_file,model,labels)
 
   col1,col2 = st.beta_columns(2)
   with col1:
