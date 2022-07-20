@@ -84,7 +84,7 @@ if uploaded_file is not None:
 
   with col2:
     st.image(heatmap)
-    st.write(predictions, 'with',( '{:.3f}'.format(predictions[0][class_predicted])), 'confidence' )
+    st.write(predictions )
 
 
 
