@@ -51,6 +51,17 @@ def get_activation_map(image_path,my_model,labels):
         heatmap = cv2.applyColorMap(np.uint8(255 * cam), cv2.COLORMAP_JET)
         heatmap[np.where(cam < 0.2)] = 0
         heatmap = np.uint8(heatmap * 0.3 + image_loaded)
+        
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        org = (50, 50) 
+        fontScale = 0.3
+        color = (255, 0, 0)
+        thickness = 1
+          
+        # Using cv2.putText() method
+        cv2.putText(heatmap, ( '{} with  {:.3f} confidence'.format(class_predicted_name,predictions[0][class_predicted])) , org, font, 
+                          fontScale, color, thickness, cv2.LINE_AA)
+        
 
         return image_loaded,heatmap,predictions1
 
