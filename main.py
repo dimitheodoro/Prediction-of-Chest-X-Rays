@@ -17,7 +17,6 @@ img_size=224
 labels = {0: 'Normal', 1: 'Pathological'}
 
 @st.experimental_memo(ttl=60)
-
 def load_model():
     print(" MODEL LOADED !!!")
     return load_model('Bioiatriki_project_binary.h5')
