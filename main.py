@@ -15,7 +15,7 @@ import keras
 
 img_size=224
 labels = {0: 'Normal', 1: 'Pathological'}
-model=load_model('Bioiatriki_project.h5')
+model=load_model('Bioiatriki_project_binary.h5')
 
  
 def get_activation_map(image_path,my_model,labels):
