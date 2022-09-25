@@ -88,5 +88,5 @@ if code=='1234':
      st.image(heatmap)
 
      st.write( '{} with  {:.3f} confidence'.format(class_predicted_name,predictions[0][class_predicted])) 
-else:
- st.write("Wrong code")
+ else:
+  st.write("Wrong code")
