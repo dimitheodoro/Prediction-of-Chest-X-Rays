@@ -12,7 +12,7 @@ import keras
 
 code = st.text_input('Enter code' )
 if code=='1234':
- st.write("O K)
+ st.write("O K")
 
 # img_size=224
 # labels = {0: 'Normal', 1: 'Pathological'}
