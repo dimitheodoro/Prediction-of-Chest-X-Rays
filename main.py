@@ -64,12 +64,10 @@ def get_activation_map(image_path,my_model,labels):
 
         return image_loaded,heatmap,predictions1,class_predicted_name,class_predicted,predictions
 
-
-       
-
 print(".......PLEASE WAIT.....")
 
-code = st.input("Enter code")
+code = st.text_input("Enter code")
+
 if code=='1234':
  st.title("Prediction of Chest X-RAYs")
  with st.beta_container():
