@@ -16,7 +16,7 @@ code = st.text_input('Enter your code: ')
 if code=='1234':
  continue
 else:
- print"Wrong code"
+ print("Wrong code")
 
 img_size=224
 labels = {0: 'Normal', 1: 'Pathological'}
